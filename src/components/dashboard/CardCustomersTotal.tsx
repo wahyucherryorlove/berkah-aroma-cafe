@@ -2,10 +2,10 @@ import { UsersAlt } from "@components/icons/UsersAlt";
 
 export function CardCustomersTotal() {
   return (
-    <div className="w-full bg-neutral-900 px-4 py-3 rounded-md mt-5 ">
+    <div className="w-full bg-neutral-800 px-4 py-3 rounded-md mt-5 group border border-neutral-700">
       <div className="flex items-center justify-between">
         <h4 className="text-neutral-400">Customers</h4>
-        <i className="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-800 to-blue-500">
+        <i className="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-800 to-blue-500 group-hover:scale-110 duration-200">
           <UsersAlt className="w-4 h-4 fill-neutral-50" />
         </i>
       </div>

@@ -2,6 +2,7 @@ import { CardCustomersTotal } from "@components/dashboard/CardCustomersTotal";
 import { CardConversionTotal } from "@components/dashboard/CardConversionTotal";
 import { CardOrdersTotal } from "@components/dashboard/CardOrdersTotal";
 import { CardRevenueTotal } from "@components/dashboard/CardRevenueTotal";
+import { RecendOrdersTable } from "@components/dashboard/RecendOrdersTable";
 
 export default function Home() {
   return (
@@ -15,6 +16,14 @@ export default function Home() {
         <CardCustomersTotal />
         <CardOrdersTotal />
         <CardConversionTotal />
+      </section>
+
+      <section className="bg-neutral-800 w-full mt-10 p-4 rounded-md border border-neutral-600 overflow-hidden">
+        <h4 className="text-neutral-300 font-semibold">Recend Orders</h4>
+
+        <div className="mt-4 overflow-x-scroll overflow-y-hidden desktop:overflow-hidden w-full">
+          <RecendOrdersTable />
+        </div>
       </section>
     </main>
   );
