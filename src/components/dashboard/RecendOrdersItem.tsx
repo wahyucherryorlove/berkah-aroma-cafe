@@ -9,6 +9,7 @@ interface RecendOrdersItemProps {
   userId: number;
   nameDish: string;
   price: number;
+  images: string;
   statusOrder: boolean;
 }
 
@@ -17,6 +18,7 @@ export function RecendOrdersItem({
   userId = 0,
   nameDish = "",
   price = 0,
+  images = "",
   statusOrder = false,
 }: RecendOrdersItemProps) {
   const rupiah = new Intl.NumberFormat("id", {
@@ -30,7 +32,7 @@ export function RecendOrdersItem({
       <td className="flex items-center gap-x-4 h-14 text-sm">
         <div className="relative w-10 h-10">
           <Image
-            src="/images/menu/calabrese-scramble.jpg"
+            src={`/images/menu/${images}`}
             alt="Makanan or Minuman"
             className="object-cover  rounded-md"
             fill

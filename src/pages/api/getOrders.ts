@@ -8,7 +8,7 @@ export default async function getOrders(
   const { data, error } = await supabase
     .from("tbl_order")
     .select(
-      `id, id_menu, id_user, quantity, status, tbl_menu(id, name, price)`
+      `id, id_menu, id_user, quantity, status, tbl_menu(id, name, price, images)`
     );
 
   if (error) {

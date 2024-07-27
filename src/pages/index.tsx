@@ -1,8 +1,6 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
 
-import { supabase } from "@libs/supabase";
-
 import { CardCustomersTotal } from "@components/dashboard/CardCustomersTotal";
 import { CardConversionTotal } from "@components/dashboard/CardConversionTotal";
 import { CardOrdersTotal } from "@components/dashboard/CardOrdersTotal";
@@ -13,6 +11,7 @@ type MenuType = {
   id: number;
   name: string;
   price: number;
+  images: string;
 };
 
 type OrdersType = {
@@ -25,7 +24,6 @@ type OrdersType = {
 
 export default function Home() {
   const [orders, setOrders] = useState<OrdersType[]>([]);
-  const [menu, setMenu] = useState<MenuType[]>([]);
 
   useEffect(() => {
     async function fetchOrders() {
@@ -86,6 +84,7 @@ export default function Home() {
                     statusOrder={order.status}
                     nameDish={order.tbl_menu.name}
                     price={order.tbl_menu.price}
+                    images={order.tbl_menu.images}
                   />
                 ))}
               </tbody>
