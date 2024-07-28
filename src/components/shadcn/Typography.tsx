@@ -13,7 +13,7 @@ const Typography = forwardRef<
   TypographyProps
 >(
   (
-    { children, className, variant, font = "karla", weight = "normal" },
+    { children, variant, font = "karla", weight = "normal", className },
     ref
   ) => {
     const fontWeight = determineFontWeight(weight);
@@ -136,6 +136,8 @@ function determineFontWeight(fontWeight: string) {
       break;
     }
   }
+
+  return tailwindClass;
 }
 
 export { Typography };
